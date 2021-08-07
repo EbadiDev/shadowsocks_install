@@ -1635,7 +1635,7 @@ Advanced_features() {
 			#https://stackoverflow.com/a/28356429
 			if [[ ${ret_code:-0} != +(200|301|302) ]]; then
 				echo -e '\033[7;31;43m无法访问Google请尝试切换或者关闭代理！\033[0m'
-				else
+			else
 				ret_code=$(curl --silent --location --connect-timeout 2 --max-time 4 --url https://www.google.com/search?q=test | grep CAPTCHA)
 				if [ -n "$ret_code" ]; then
 					echo -e '\033[7;31;43m访问Google时遇到reCAPTCHA验证请尝试切换或者关闭代理！\033[0m'
