@@ -411,6 +411,9 @@ Check() {
 			shasum)
 				$common_install libdigest-sha-perl
 				;;
+			column)
+				$common_install bsdmainutils
+				;;
 			*)
 				$common_install $i
 				;;
