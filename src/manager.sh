@@ -398,7 +398,7 @@ Check() {
 		Prompt "The script does not support the package manager in this operating system."
 		Exit
 	fi
-	local package_list=(wget netstat pkill socat jq openssl shasum)
+	local package_list=(wget netstat pkill socat jq openssl shasum column)
 	for i in ${package_list[@]}; do
 		if ! command_exists $i; then
 			case $i in
